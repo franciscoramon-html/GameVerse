@@ -44,6 +44,31 @@
             background-size: cover;
             background-position: center;
         }
+
+
+        @media (max-width: 768px) {
+            .game-hero {
+                height: 40vh; 
+            }
+        }
+       
+        @media (max-width: 1023px) { 
+            .mobile-slider {
+                display: flex;
+                overflow-x: auto; 
+                scroll-snap-type: x mandatory; 
+                gap: 1.5rem; 
+                scrollbar-width: none; 
+            }
+            .mobile-slider::-webkit-scrollbar {
+                display: none; 
+            }
+            .mobile-slider > * { 
+                flex: 0 0 90%; 
+                scroll-snap-align: start; 
+            }
+        }
+
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -61,6 +86,15 @@
               <a href="noticias.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Noticias</a>
             </nav>
         </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="flex flex-col px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                 <a href="inicio.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                 <a href="portal.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Portal</a>
+                 <a href="proximamente.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Próximamente</a>
+                 <a href="noticias.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Noticias</a>
+                 <a href="ultimos-juegos.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Últimos juegos</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -72,7 +106,7 @@
         </section>
 
         <div class="container mx-auto px-6 py-12">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8 mobile-slider">
                 
                 <div class="lg:col-span-2">
                     <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
@@ -133,5 +167,14 @@
         </div>
     </footer>
 
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 </html>
+
