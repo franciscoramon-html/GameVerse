@@ -91,14 +91,6 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <nav class="flex flex-col px-2 pt-2 pb-4 space-y-1 sm:px-3">
-                 <a href="inicio.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-                 <a href="portal.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Portal</a>
-                 <a href="proximamente.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Próximamente</a>
-                 <a href="ultimos-juegos.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Últimos Hits</a>
-            </nav>
-        </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
@@ -296,16 +288,7 @@
             cancelBtn.addEventListener('click', closeModal);
             overlay.addEventListener('click', closeModal);
         });
-
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
     </script>
 
   </body>
-
 </html>
