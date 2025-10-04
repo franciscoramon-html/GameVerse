@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a GameVerse</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-primary: #3b82f6;
+            --color-glow: rgba(59, 130, 246, 0.7);
+        }
+
+        body, html {
+            overflow: hidden;
+        }
+        
+        
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+        
+        .background-grid {
+            display: flex;
+            gap: 1vw;
+            position: absolute;
+            top: -25%; 
+            left: 50%;
+            width: 150vw; 
+            height: 150%; 
+            transform: translateX(-50%) rotate(-15deg); 
+        }
+        
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+            min-width: 200px;
+            flex: 1;
+            animation-duration: 120s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .column img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            opacity: 0.7;
+        }
+
+        @keyframes scrollUp {
+            from { transform: translateY(0); }
+            50% { transform: translateY(-50%); }
+            to { transform: translateY(-100%); }
+        }
+
+        @keyframes scrollDown {
+            from { transform: translateY(-100%); }
+            50% { transform: translateY(-50%); }
+            to { transform: translateY(0); }
+        }
+        
+        .column:nth-child(odd) {
+            animation-name: scrollDown;
+        }
+
+        .column:nth-child(even) {
+            animation-name: scrollUp;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.95) 100%);
+            z-index: -1;
+        }
+
+        
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; 
+            z-index: 1;
+        }
+        
+        h1, .main-button {
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        p {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-content > * {
+            animation: fadeInSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        }
+
+        .fade-in-content h1 {
+            animation-delay: 0.2s;
+        }
+        .fade-in-content p {
+            animation-delay: 0.4s;
+        }
+        .fade-in-content .main-button {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px var(--color-glow);
+            }
+            50% {
+                box-shadow: 0 0 35px var(--color-glow);
+            }
+        }
+        
+        .main-button {
+            border: 2px solid var(--color-primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: transparent;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 20px var(--color-glow);
+            animation: pulse-glow 3s infinite;
+        }
+
+        .main-button:hover {
+            background-color: var(--color-primary);
+            color: white;
+            transform: scale(1.05);
+            animation-play-state: paused; 
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    
+    <div class="background-container">
+        <div class="background-grid">
+            
+            <div class="column">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/YMUoJUYNX0xWk6eTKuZLr5Iw.jpg" alt="Elden Ring">
+                <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/ncom/software/switch/70010000033071/3f7ee6aa3482b514bd443e116022b038a9728f017916ed37da3f09f731a7d5f2" alt="The Witcher 3">
+                <img src="https://cdn1.epicgames.com/offer/b0cd075465c44f87be3b505ac04a2e46/EGS_GrandTheftAutoVEnhanced_RockstarNorth_S1_2560x1440-906d8ae76a91aafc60b1a54c23fab496" alt="GTA V">
+                <img src="https://www.zonammorpg.com/wp-content/uploads/2023/03/starfield-1.jpg" alt="Starfield">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202309/2117/d595dafc43ecb6025fe5e533892975bf0f3d86e8697be6c4.jpg" alt="Helldivers 2">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/YMUoJUYNX0xWk6eTKuZLr5Iw.jpg" alt="Elden Ring">
+                <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/ncom/software/switch/70010000033071/3f7ee6aa3482b514bd443e116022b038a9728f017916ed37da3f09f731a7d5f2" alt="The Witcher 3">
+                <img src="https://cdn1.epicgames.com/offer/b0cd075465c44f87be3b505ac04a2e46/EGS_GrandTheftAutoVEnhanced_RockstarNorth_S1_2560x1440-906d8ae76a91aafc60b1a54c23fab496" alt="GTA V">
+                <img src="https://www.zonammorpg.com/wp-content/uploads/2023/03/starfield-1.jpg" alt="Starfield">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202309/2117/d595dafc43ecb6025fe5e533892975bf0f3d86e8697be6c4.jpg" alt="Helldivers 2">
+            </div>
+           
+            <div class="column">
+                <img src="https://i.blogs.es/b109e9/cyberpunk2077-johnny-v-rgb_en/1366_2000.jpg" alt="Cyberpunk 2077">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg" alt="Baldur's Gate 3">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg" alt="God of War">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202409/2716/b23608e3b46e3b1f6aebb78a4aa9b1bf4f72a1d99f42ed01.jpg" alt="Horizon Zero Dawn">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202305/2601/47b97b7a4e7493d9701c7ecabdbdfff0ea49c61effeb6299.jpg" alt="Alan Wake 2">
+                <img src="https://i.blogs.es/b109e9/cyberpunk2077-johnny-v-rgb_en/1366_2000.jpg" alt="Cyberpunk 2077">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202302/2321/3098481c9164bb5f33069b37e49fba1a572ea3b89971ee7b.jpg" alt="Baldur's Gate 3">
+                <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg" alt="God of War">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202409/2716/b23608e3b46e3b1f6aebb78a4aa9b1bf4f72a1d99f42ed01.jpg" alt="Horizon Zero Dawn">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202305/2601/47b97b7a4e7493d9701c7ecabdbdfff0ea49c61effeb6299.jpg" alt="Alan Wake 2">
+            </div>
+            
+            <div class="column">
+                <img src="https://gepig.com/game_cover_460w/3905.jpg" alt="Red Dead Redemption 2">
+                <img src="https://www.qualbert.com/wp-content/uploads/2023/06/Tears-of-the-Kingdom-wallpaper-1170x720.jpg" alt="Zelda: Tears of the Kingdom">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/0kRqUeSBIbQzz7cen3c989c6.jpg" alt="The Last of Us">
+                <img src="https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2024/02/Final-Fantasy-VII-Rebirth-key-art-logo.jpg?resize=750%2C400&ssl=1" alt="Final Fantasy VII Rebirth">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/cb8da9b3e99cf7362cd88c10a0544b7fe892ccad/capsule_616x353.jpg?t=1750954033" alt="Marvel's Spider-Man 2">
+                <img src="https://gepig.com/game_cover_460w/3905.jpg" alt="Red Dead Redemption 2">
+                <img src="https://www.qualbert.com/wp-content/uploads/2023/06/Tears-of-the-Kingdom-wallpaper-1170x720.jpg" alt="Zelda: Tears of the Kingdom">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/0kRqUeSBIbQzz7cen3c989c6.jpg" alt="The Last of Us">
+                <img src="https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2024/02/Final-Fantasy-VII-Rebirth-key-art-logo.jpg?resize=750%2C400&ssl=1" alt="Final Fantasy VII Rebirth">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2651280/cb8da9b3e99cf7362cd88c10a0544b7fe892ccad/capsule_616x353.jpg?t=1750954033" alt="Marvel's Spider-Man 2">
+            </div>
+            
+            <div class="column hidden md:flex">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/capsule_616x353.jpg?t=1695270428" alt="Hollow Knight">
+                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000033131/dbc8c55a21688b446a5c57711b726956483a14ef8c5ddb861f897c0595ccb6b5" alt="Hades">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg?t=1733260906" alt="Stray">
+                <img src="https://www.irrompibles.net/irrwp/wp-content/uploads/2019/04/Sekiro-header-1050x550.jpg" alt="Sekiro">
+                <img src="https://i0.wp.com/nerfeados.com/wp-content/uploads/2017/10/PersonaRev_Portada.jpg?fit=1024%2C576&ssl=1" alt="Persona 5">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/capsule_616x353.jpg?t=1695270428" alt="Hollow Knight">
+                <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/ncom/software/switch/70010000033131/dbc8c55a21688b446a5c57711b726956483a14ef8c5ddb861f897c0595ccb6b5" alt="Hades">
+                <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/header.jpg?t=1733260906" alt="Stray">
+                <img src="https://www.irrompibles.net/irrwp/wp-content/uploads/2019/04/Sekiro-header-1050x550.jpg" alt="Sekiro">
+                <img src="https://i0.wp.com/nerfeados.com/wp-content/uploads/2017/10/PersonaRev_Portada.jpg?fit=1024%2C576&ssl=1" alt="Persona 5">
+            </div>
+            
+            <div class="column hidden lg:flex">
+                <img src="https://cdn1.epicgames.com/offer/b5ac16dc12f3478e99dcfea07c13865c/EGS_DOOMEternal_idSoftware_S1_2560x1440-06b46993a4b6c19a9e614f2dd1202215" alt="DOOM Eternal">
+                <img src="https://controlgame.com/wp-content/uploads/2019/03/control_keyart.jpg" alt="Control">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1850570/3b0d071a89844ffc8062edbb36bc0b6a7ab3f7ce/capsule_616x353.jpg?t=1750697259" alt="Death Stranding">
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/bltf9ef4fee9c77a1b5/66df937c97d7ebef3679492b/d4-npe_story-launch-trailer_agnostic_960.webp" alt="Diablo IV">
+                <img src="https://store-images.s-microsoft.com/image/apps.32577.14254372351363255.ac3906d1-13b6-4af0-a00a-e10c8a92007b.f74e6e13-69bd-49f0-a873-2f8346a30ead?q=90&w=480&h=270" alt="Mass Effect">
+                <img src="https://cdn1.epicgames.com/offer/b5ac16dc12f3478e99dcfea07c13865c/EGS_DOOMEternal_idSoftware_S1_2560x1440-06b46993a4b6c19a9e614f2dd1202215" alt="DOOM Eternal">
+                <img src="https://controlgame.com/wp-content/uploads/2019/03/control_keyart.jpg" alt="Control">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1850570/3b0d071a89844ffc8062edbb36bc0b6a7ab3f7ce/capsule_616x353.jpg?t=1750697259" alt="Death Stranding">
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/bltf9ef4fee9c77a1b5/66df937c97d7ebef3679492b/d4-npe_story-launch-trailer_agnostic_960.webp" alt="Diablo IV">
+                <img src="https://store-images.s-microsoft.com/image/apps.32577.14254372351363255.ac3906d1-13b6-4af0-a00a-e10c8a92007b.f74e6e13-69bd-49f0-a873-2f8346a30ead?q=90&w=480&h=270" alt="Mass Effect">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="overlay"></div>
+
+    <section class="hero-section">
+        <div class="fade-in-content px-4">
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white mb-4">
+                Game<span class="text-blue-500">Verse</span>
+            </h1>
+            
+            
+            <a href="portal.html" class="main-button inline-block rounded-lg">
+                Entrar al Portal
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
