@@ -44,30 +44,6 @@
             background-size: cover;
             background-position: center;
         }
-
-
-        @media (max-width: 768px) {
-            .game-hero {
-                height: 40vh; 
-            }
-        }
-       
-        @media (max-width: 1023px) { 
-            .mobile-slider {
-                display: flex;
-                overflow-x: auto; 
-                scroll-snap-type: x mandatory; 
-                gap: 1.5rem; 
-                scrollbar-width: none; 
-            }
-            .mobile-slider::-webkit-scrollbar {
-                display: none; 
-            }
-            .mobile-slider > * { 
-                flex: 0 0 90%; 
-                scroll-snap-align: start; 
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -85,15 +61,6 @@
               <a href="noticias.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Noticias</a>
             </nav>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <nav class="flex flex-col px-2 pt-2 pb-4 space-y-1 sm:px-3">
-                 <a href="inicio.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-                 <a href="portal.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Portal</a>
-                 <a href="proximamente.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Próximamente</a>
-                 <a href="noticias.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Noticias</a>
-                 <a href="ultimos-juegos.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Últimos juegos</a>
-            </nav>
-        </div>
     </header>
 
     <main>
@@ -105,38 +72,42 @@
         </section>
 
         <div class="container mx-auto px-6 py-12">
-                <div class="lg:grid lg:grid-cols-3 lg:gap-8 mobile-slider">
-            
-                    <div class="lg:col-span-2">
-                        <div class="bg-gray-800 p-8 rounded-lg shadow-lg h-full">
-                            <h2 class="text-3xl font-bold mb-4 border-b-2 border-blue-500 pb-2">Descripción</h2>
-                            <p class="text-gray-300 leading-relaxed mb-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-2">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        
+                        <h2 class="text-3xl font-bold mb-4 border-b-2 border-blue-500 pb-2">Descripción</h2>
+                        <p class="text-gray-300 leading-relaxed mb-6">
                             Grand Theft Auto VI o GTA 6 es la nueva entrega de la saga de aventuras y acción en mundo abierto de la saga superventas GTA de Rockstar Games, que sentó las bases que luego han imitado todos los 'sandbox' posteriores.
-                            </p>
-                            <h3 class="text-2xl font-bold mb-4">Historia y Ambientación</h3>
-                            <p class="text-gray-300 leading-relaxed mb-6">
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold mb-4">Historia y Ambientación</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
                             Este nuevo Grand Theft Auto se ambienta en una Vice City moderna, la versión ficticia de Miami (Florida), y como novedad estará protagonizado por dos protagonistas, Jason y Lucia -la primera protagonista femenina en un GTA principal.
-                            </p>
-                            <h3 class="text-2xl font-bold mb-4">Jugabilidad</h3>
-                            <p class="text-gray-300 leading-relaxed">
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold mb-4">Jugabilidad</h3>
+                        <p class="text-gray-300 leading-relaxed">
                             Podremos participar en misiones de robos y otras actividades delictivas con una versión mejorada del gameplay de GTA 5, así como una ciudad más viva que nunca que aprovecha todos los avances técnicos de los últimos años y la experiencia de Rockstar tras Red Dead Redemption 2.
-                            </p>
-                        </div>
+                        </p>
                     </div>
+                </div>
 
-                    <div class="lg:col-span-1">
-                        <div class="bg-gray-800 p-6 rounded-lg shadow-lg lg:sticky top-24 h-full">
-                            <h3 class="text-2xl font-bold mb-4">Ficha Técnica</h3>
-                            <div class="space-y-3 text-gray-300">
-                                <div class="flex justify-between"><span>Desarrollador:</span> <span class="font-bold text-white">Rockstar North</span></div>
-                                <div class="flex justify-between"><span>Editor:</span> <span class="font-bold text-white">Rockstar Games</span></div>
-                                <div class="flex justify-between"><span>Lanzamiento:</span> <span class="font-bold text-white">26 MAY 2026</span></div>
-                                <div class="flex justify-between"><span>Género:</span> <span class="font-bold text-white">RPG, Mundo Abierto</span></div>
-                                <div class="flex justify-between"><span>Plataformas:</span> <span class="font-bold text-white">PC, PS5, XBOX series X/S</span></div>
-                            </div>
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg sticky top-24">
+                        <h3 class="text-2xl font-bold mb-4">Ficha Técnica</h3>
+                        <div class="space-y-3 text-gray-300">
+                            <div class="flex justify-between"><span>Desarrollador:</span> <span class="font-bold text-white">Rockstar North</span></div>
+                            <div class="flex justify-between"><span>Editor:</span> <span class="font-bold text-white">Rockstar Games</span></div>
+                            <div class="flex justify-between"><span>Lanzamiento:</span> <span class="font-bold text-white">26 MAY 2026</span></div>
+                            <div class="flex justify-between"><span>Género:</span> <span class="font-bold text-white">RPG, Mundo Abierto</span></div>
+                            <div class="flex justify-between"><span>Plataformas:</span> <span class="font-bold text-white">PC, PS5, XBOX series X/S</span></div>
                         </div>
+                        
                     </div>
-              </div>
+                </div>
+            </div>
 
             <div class="mt-12">
                 <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-500 pb-2">Galería y Multimedia</h2>
@@ -149,8 +120,8 @@
                 </div>
 
                 <h3 class="text-2xl font-bold mb-4">Tráiler Oficial</h3>
-                <div class="aspect-video">
-                    <iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/QdBZY2fkU-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe class="w-full rounded-lg" height="850" src="https://www.youtube.com/embed/VQRLujxTm3c?si=FNvwYn3dwtCxtj8u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -162,14 +133,5 @@
         </div>
     </footer>
 
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-
 </body>
 </html>
-
