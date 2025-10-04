@@ -18,7 +18,7 @@
             background-color: #111827; 
             color: #f3f4f6; 
         }
-        h1, h2, h3 {
+        h1, h2 {
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 1.5px;
         }
@@ -77,21 +77,13 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <nav class="flex flex-col px-2 pt-2 pb-4 space-y-1 sm:px-3">
-                 <a href="inicio.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
-                 <a href="portal.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Portal</a>
-                 <a href="proximamente.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Próximamente</a>
-                 <a href="noticias.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Noticias</a>
-            </nav>
-        </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
         
         <section id="ultimos-juegos" class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10 border-b-4 border-blue-500 pb-2 inline-block">Últimos <span class="text-blue-500">Hits</span></h2>
+            <h2 class="text-4xl font-bold text-center mb-10 border-b-4 border-blue-500 pb-2 inline-block">Últimos <span class="text-blue-500">Hits</span></h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                 
@@ -194,16 +186,5 @@
         </div>
     </footer>
 
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-
 </body>
 </html>
-
-
