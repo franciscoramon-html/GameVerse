@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Gaming</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111827; 
+            color: #f3f4f6; 
+        }
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; 
+        }
+
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-card {
+            opacity: 0; 
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-blue-500/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white uppercase">
+                <a href="#">Game<span class="text-blue-500">Verse</span></a>
+            </h1>
+            <nav class="hidden md:flex space-x-4">
+                <a href="inicio.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Inicio</a>
+                <a href="portal.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Portal</a>
+                <a href="ultimos-juegos.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Últimos hits</a>
+                <a href="noticias.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Noticias</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+      <section id="proximas-generaciones" class="mb-20">
+        <h2 class="text-4xl font-bold text-center mb-10 border-b-4 border-blue-500 pb-2 inline-block">Próximas <span class="text-blue-500">Generaciones</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <a href="gta-vi.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.1s;">
+                    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2024/03/gta-6-3282307.jpg?tf=3840x" alt="GTA VI" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Grand Theft Auto VI</h3>
+                        <p class="text-gray-400 text-sm">Rockstar Games promete revolucionar de nuevo el mundo abierto con el regreso a Vice City, ofreciendo una experiencia sin precedentes en la saga.</p>
+                    </div>
+                </article>
+            </a>
+
+            <a href="fable.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.2s;">
+                    <img src="https://gaming-cdn.com/images/products/7187/616x353/fable-pc-game-steam-cover.jpg?v=1740500279" alt="Fable" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Fable</h3>
+                        <p class="text-gray-400 text-sm">El reinicio de la aclamada saga de rol de la mano de Playground Games. Se espera un mundo de fantasía vibrante lleno de humor y decisiones morales.</p>
+                    </div>
+                </article>
+            </a>
+            
+            <a href="little-nightmares-3.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.3s;">
+                    <img src="https://www.infobae.com/resizer/v2/2G7C4LMSJVEIRDEG44GTGJPQKM.jpg?auth=6fb23d663c97fd52ed372c594c691397f654135b7c967b29e059f1c3b780f64c&smart=true&width=1200&height=1200&quality=85" alt="lil nightmares" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Little Nightmares 3</h3>
+                        <p class="text-gray-400 text-sm">Little Nightmares III es un juego de aventuras atmosférico en el que sigues el viaje de Low y Alone, dos mejores amigos en busca de una salida de la nada.</p>
+                    </div>
+                </article>
+            </a>
+
+            <a href="wolverine.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.4s;">
+                    <img src="https://gaming-cdn.com/images/products/13543/orig/marvel-s-wolverine-playstation-5-game-playstation-store-cover.jpg?v=1730192865" alt="Marvel's Wolverine" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Marvel's Wolverine</h3>
+                        <p class="text-gray-400 text-sm">Insomniac Games, creadores de Spider-Man, trabajan en una aventura madura protagonizada por Logan, prometiendo una narrativa emocional y acción visceral.</p>
+                    </div>
+                </article>
+            </a>
+
+            <a href="ark-2.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.5s;">
+                    <img src="https://www.zonammorpg.com/wp-content/uploads/2020/12/ark-2-1620x800.png" alt="ARK 2" class="w-full h-48 object-cover">
+                    <div class="p-5"><h3 class="text-xl font-bold mb-2">ARK 2</h3><p class="text-gray-300 text-sm">De repente, despiertas en un mundo primigenio lleno de dinosaurios y humanos que luchan por el dominio.</p></div>
+                </article>
+            </a>
+
+            <a href="subnautica-2.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.6s;">
+                    <img src="https://cdn1.epicgames.com/spt-assets/011270e3237f4bf69a3459942f005393/subnautica-2-xdmz7.jpg" alt="Subnautica 2" class="w-full h-48 object-cover">
+                    <div class="p-5"><h3 class="text-xl font-bold mb-2">Subnautica 2</h3><p class="text-gray-300 text-sm">Sumérgete en una nueva aventura con Subnautica 2, un juego de supervivencia en aguas abiertas.</p></div>
+                </article>
+            </a>
+
+            <a href="battlefield-6.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.7s;">
+                    <img src="https://cdn1.epicgames.com/offer/a14a02aa3c8143729605eaf7c93d7501/EGS_Battlefield6PhantomEdition_BattlefieldStudios_Editions_S1_2560x1440-178d074f8622b8c88c40111efb8c7c71" alt="Battlefield™ 6" class="w-full h-48 object-cover">
+                    <div class="p-5"><h3 class="text-xl font-bold mb-2">Battlefield™ 6</h3><p class="text-gray-300 text-sm">La experiencia definitiva de guerra total. En una guerra de tanques, cazas y enormes arsenales, tu escuadrón es el arma más letal.</p></div>
+                </article>
+            </a>
+
+            <a href="death-stranding-2.html" class="block">
+                <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.8s;">
+                    <img src="https://image.api.playstation.com/vulcan/ap/rnd/202503/0316/ba08d42ca97ad050e653b7eda937dca69e560a707eb03dd4.jpg" alt="Death Stranding 2: On the Beach" class="w-full h-48 object-cover">
+                    <div class="p-5"><h3 class="text-xl font-bold mb-2">Death Stranding 2: On The Beach</h3><p class="text-gray-300 text-sm">La secuela de la enigmática obra de Hideo Kojima, que promete expandir su universo con nuevas localizaciones y mecánicas de conexión.</p></div>
+                </article>
+            </a>
+
+        </div>
+      </section>
+    
+      
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-6 py-4 text-center text-gray-400">
+          <p>&copy; 2025 GameVerse. Todos los derechos reservados. Hecho por Francisco Ramón</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Detalles del Juego - GameVerse</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111827; 
+            color: #f3f4f6; 
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; 
+        }
+
+        
+        .game-hero {
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Encabezado (igual al de las otras páginas) -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-blue-500/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white uppercase">
+                <a href="index.html">Game<span class="text-blue-500">Verse</span></a>
+            </h1>
+            <nav class="hidden md:flex space-x-4">
+              <a href="inicio.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Inicio</a>
+              <a href="portal.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Portal</a>
+              <a href="ultimos-juegos.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Últimos hits</a>
+              <a href="proximamente.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Próximamente</a>
+              <a href="noticias.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Noticias</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION - REEMPLAZAR IMAGEN DE FONDO -->
+        <section class="game-hero relative flex items-end" style="background-image: url('https://placehold.co/1600x600/111827/3b82f6?text=Imagen+del+Juego');">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+            <div class="container mx-auto px-6 pb-12 relative">
+                <!-- REEMPLAZAR TÍTULO DEL JUEGO -->
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white">Nombre del Juego</h1>
+            </div>
+        </section>
+
+        <!-- CONTENIDO DETALLADO -->
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- COLUMNA PRINCIPAL (IZQUIERDA) -->
+                <div class="lg:col-span-2">
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        
+                        <!-- REEMPLAZAR DESCRIPCIÓN -->
+                        <h2 class="text-3xl font-bold mb-4 border-b-2 border-blue-500 pb-2">Descripción</h2>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Aquí va una descripción detallada y atractiva del juego. Habla sobre la premisa principal, el tipo de experiencia que ofrece, y qué lo hace especial. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        
+                        <!-- REEMPLAZAR HISTORIA -->
+                        <h3 class="text-2xl font-bold mb-4">Historia y Ambientación</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Detalla el universo del juego, los personajes principales, el conflicto central y la narrativa que el jugador seguirá. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        
+                        <!-- REEMPLAZAR JUGABILIDAD -->
+                        <h3 class="text-2xl font-bold mb-4">Jugabilidad</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Explica las mecánicas principales: combate, exploración, sistemas de progresión, crafteo, etc. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BARRA LATERAL (DERECHA) -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg sticky top-24">
+                        <h3 class="text-2xl font-bold mb-4">Ficha Técnica</h3>
+                        <div class="space-y-3 text-gray-300">
+                            <!-- REEMPLAZAR DATOS -->
+                            <div class="flex justify-between"><span>Desarrollador:</span> <span class="font-bold text-white">Game Studios</span></div>
+                            <div class="flex justify-between"><span>Editor:</span> <span class="font-bold text-white">Publisher Inc.</span></div>
+                            <div class="flex justify-between"><span>Lanzamiento:</span> <span class="font-bold text-white">18 Sep, 2025</span></div>
+                            <div class="flex justify-between"><span>Género:</span> <span class="font-bold text-white">RPG, Mundo Abierto</span></div>
+                            <div class="flex justify-between"><span>Plataformas:</span> <span class="font-bold text-white">PC, PS5, Xbox Series</span></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN DE GALERÍA Y MULTIMEDIA -->
+            <div class="mt-12">
+                <h2 class="text-3xl font-bold mb-6 border-b-2 border-blue-500 pb-2">Galería y Multimedia</h2>
+                
+                <!-- GALERÍA DE IMÁGENES -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <!-- REEMPLAZAR IMÁGENES -->
+                    <a href="#"><img src="https://placehold.co/600x400/1f2937/3b82f6?text=Screenshot+1" alt="Screenshot 1" class="rounded-lg hover:opacity-80 transition-opacity transform hover:scale-105"></a>
+                    <a href="#"><img src="https://placehold.co/600x400/1f2937/3b82f6?text=Screenshot+2" alt="Screenshot 2" class="rounded-lg hover:opacity-80 transition-opacity transform hover:scale-105"></a>
+                    <a href="#"><img src="https://placehold.co/600x400/1f2937/3b82f6?text=Screenshot+3" alt="Screenshot 3" class="rounded-lg hover:opacity-80 transition-opacity transform hover:scale-105"></a>
+                    <a href="#"><img src="https://placehold.co/600x400/1f2937/3b82f6?text=Screenshot+4" alt="Screenshot 4" class="rounded-lg hover:opacity-80 transition-opacity transform hover:scale-105"></a>
+                </div>
+
+                <!-- TRÁILER DE YOUTUBE -->
+                <h3 class="text-2xl font-bold mb-4">Tráiler Oficial</h3>
+                <div class="aspect-w-16 aspect-h-9">
+                    <!-- REEMPLAZAR EL 'src' CON EL ENLACE DE YOUTUBE EMBED -->
+                    <iframe class="w-full rounded-lg" height="850" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700 mt-12">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-400">
+            <p>&copy; 2025 GameVerse. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

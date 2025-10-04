@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Gaming</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111827; 
+            color: #f3f4f6; 
+        }
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; 
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .animate-card {
+            opacity: 0; 
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes modal-fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes modal-zoom-in {
+            from { transform: scale(0.9); }
+            to { transform: scale(1); }
+        }
+        .modal-overlay {
+            animation: modal-fade-in 0.3s ease-out;
+        }
+        .modal-box {
+            animation: modal-zoom-in 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-blue-500/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white uppercase">
+                <a href="#">Game<span class="text-blue-500">Verse</span></a>
+            </h1>
+            <nav class="hidden md:flex space-x-4">
+                <a href="inicio.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Inicio</a>
+                <a href="portal.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Portal</a>
+                <a href="ultimos-juegos.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Últimos hits</a>
+                <a href="proximamente.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Próximamente</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+    
+      <section id="noticias" class="mb-12">
+        <h2 class="text-4xl font-bold text-center mb-10 border-b-4 border-blue-500 pb-2 inline-block">Últimas <span class="text-blue-500">Noticias</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.1s;">
+                <a href="#" class="news-link" 
+                       data-url="https://vandal.elespanol.com/noticia/1350782821/sony-redobla-su-apuesta-por-el-pc-con-los-nuevos-perifericos-inzone-para-jugones"
+                       data-title="Sony espera que sus juegos de PC generen más de 450 millones"
+                       data-image="https://media.vandal.net/i/1280x720/8-2025/21/202582112244348_1.jpg.webp"
+                       data-snippet="La compañía japonesa sigue apostando fuerte por llevar sus exclusivos de PlayStation a la plataforma de PC, esperando un crecimiento significativo en sus ingresos.">
+                        <img src="https://media.vandal.net/i/1280x720/8-2025/21/202582112244348_1.jpg.webp" alt="Sony en PC" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">La Gran Apuesta de Sony por el PC</h3>
+                            <p class="text-gray-400 text-sm">PlayStation continúa su expansión a PC con grandes expectativas de ingresos para este año fiscal.</p>
+                        </div>
+                </a>
+            </article>
+
+            
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.3s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783891/call-of-duty-se-queda-fuera-del-nuevo-xbox-game-pass-los-nuevos-juegos-de-la-saga-no-llegaran-al-plan-premium"
+                   data-title="Call of Duty se queda fuera del nuevo Xbox Game Pass"
+                   data-image="https://media.vandal.net/i/1280x720/10-2025/1/202510118535721_1.jpg.webp"
+                   data-snippet="Un giro inesperado en la estrategia de Microsoft deja a los nuevos títulos de la popular saga de disparos fuera del plan más alto del servicio de suscripción.">
+                    <img src="https://media.vandal.net/i/1280x720/10-2025/1/202510118535721_1.jpg.webp" alt="Xbox Game Pass" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Call of Duty, fuera del nuevo Game Pass Premium</h3>
+                        <p class="text-gray-400 text-sm">Los nuevos juegos de la saga no llegarán al plan más caro del renovado servicio de Xbox.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.4s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783890/esta-rota-sola-y-enfadada-con-el-mundo-asi-es-la-historia-de-ghost-of-yotei-segun-sucker-punch"
+                   data-title="Así es la historia de Ghost of Yotei según Sucker Punch"
+                   data-image="https://media.vandal.net/i/1280x720/9-2025/26/20259269152061_1.jpg.webp"
+                   data-snippet="El estudio revela los primeros detalles narrativos de su próximo gran proyecto, presentando a una protagonista marcada por la tragedia y la venganza.">
+                    <img src="https://media.vandal.net/i/1280x720/9-2025/26/20259269152061_1.jpg.webp" alt="Ghost of Yotei" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Ghost of Yotei: 'Rota, sola y enfadada'</h3>
+                        <p class="text-gray-400 text-sm">Sucker Punch comparte la oscura premisa de la historia de su nueva protagonista.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.5s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783884/renovacion-total-en-xbox-game-pass-cambia-los-planes-sube-precios-y-elimina-por-completo-pc-game-pass"
+                   data-title="Cambio total en Xbox Game Pass: Suben los precios y se divide en tres planes"
+                   data-image="https://media.vandal.net/i/1280x720/10-2025/1/202510116234498_1.jpg.webp"
+                   data-snippet="Microsoft reestructura por completo su servicio estrella, introduciendo tres nuevos niveles con diferentes precios y ventajas para los suscriptores.">
+                    <img src="https://media.vandal.net/i/1280x720/10-2025/1/202510116234498_1.jpg.webp" alt="Nuevos planes Game Pass" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Xbox Game Pass: Nuevos planes y precios</h3>
+                        <p class="text-gray-400 text-sm">El servicio se divide en tres niveles con subidas de precio y nuevas ventajas para los usuarios.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.6s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783889/ya-puedes-probar-gratis-el-genial-beat-em-up-marvel-cosmic-invasion-con-9-superheroes-para-elegir"
+                   data-title="Ya puedes probar gratis el genial beat 'em up Marvel Cosmic Invasion"
+                   data-image="https://media.vandal.net/i/1280x720/10-2025/1/20251011832937_1.jpg.webp"
+                   data-snippet="Un nuevo juego de acción inspirado en los clásicos arcade ya tiene disponible una demo gratuita en Steam, permitiendo a los jugadores controlar a 9 héroes del universo Marvel.">
+                    <img src="https://media.vandal.net/i/1280x720/10-2025/1/20251011832937_1.jpg.webp" alt="Marvel Cosmic Invasion" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Prueba gratis el beat 'em up Marvel Cosmic Invasion</h3>
+                        <p class="text-gray-400 text-sm">El nuevo juego de acción de Marvel lanza una demo gratuita con 9 superhéroes jugables.</p>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.7s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783882/la-nueva-ubisoft-ya-tiene-nombre-vantage-studios-desarrollara-los-proximos-assassins-creed-far-cry-y-mas"
+                   data-title="La 'nueva Ubisoft' ya tiene nombre: Vantage Studios"
+                   data-image="https://media.vandal.net/i/1280x720/3-2025/28/20253288481796_1.jpg.webp"
+                   data-snippet="Ubisoft anuncia la creación de Vantage Studios, un nuevo equipo que se encargará del desarrollo de las futuras entregas de sus sagas más importantes como Assassin's Creed y Far Cry.">
+                    <img src="https://media.vandal.net/i/1280x720/3-2025/28/20253288481796_1.jpg.webp" alt="Vantage Studios" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Vantage Studios, la 'nueva Ubisoft'</h3>
+                        <p class="text-gray-400 text-sm">El estudio desarrollará los próximos Assassin's Creed, Far Cry y más sagas importantes.</p>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.8s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783887/el-aplaudido-metroidvania-nine-sols-esconde-un-juego-de-terror-en-primera-persona-en-su-beta-de-steam"
+                   data-title="El metroidvania Nine Sols esconde un juego de terror"
+                   data-image="https://media.vandal.net/i/1280x720/10-2025/1/202510117281897_1.jpg.webp"
+                   data-snippet="Los jugadores han descubierto un sorprendente secreto en la beta del esperado metroidvania, que da acceso a un juego de terror en primera persona completamente inesperado.">
+                    <img src="https://media.vandal.net/i/1280x720/10-2025/1/202510117281897_1.jpg.webp" alt="Nine Sols" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Nine Sols esconde un juego de terror secreto</h3>
+                        <p class="text-gray-400 text-sm">El aplaudido metroidvania oculta un espeluznante juego en primera persona en su beta de Steam.</p>
+                    </div>
+                </a>
+            </article>
+            
+            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.9s;">
+                <a href="#" class="news-link" 
+                   data-url="https://vandal.elespanol.com/noticia/1350783886/se-graba-acosando-a-desarrolladores-de-gta-6-a-la-salida-de-las-oficinas-de-rockstar-estoy-cansado-de-esperar"
+                   data-title="Se graba acosando a desarrolladores de GTA 6"
+                   data-image="https://media.vandal.net/i/1280x720/10-2025/1/202510117114966_1.jpg.webp"
+                   data-snippet="Un individuo genera polémica al grabarse y publicar un vídeo en el que persigue e increpa a varios empleados de Rockstar a la salida de sus oficinas, exigiendo noticias sobre el juego.">
+                    <img src="https://media.vandal.net/i/1280x720/10-2025/1/202510117114966_1.jpg.webp" alt="Acoso Rockstar" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Acoso a desarrolladores de GTA 6</h3>
+                        <p class="text-gray-400 text-sm">Un individuo se graba increpando a empleados de Rockstar a la salida de sus oficinas.</p>
+                    </div>
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-6 py-4 text-center text-gray-400">
+          <p>&copy; 2025 GameVerse. Todos los derechos reservados. Hecho por Francisco Ramón</p>
+      </div>
+    </footer>
+
+    <div id="preview-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+    <div id="modal-overlay" class="absolute inset-0 bg-black/70 modal-overlay"></div>
+    
+    <div class="modal-box bg-gray-800 rounded-lg shadow-2xl w-full max-w-2xl mx-4 relative transform transition-all">
+        <button id="close-modal-btn" class="absolute -top-3 -right-3 bg-red-600 hover:bg-red-700 text-white rounded-full w-8 h-8 flex items-center justify-center transition-transform transform hover:scale-110">
+            &times;
+        </button>
+        
+        <div class="p-6">
+            <img id="modal-image" src="" alt="Vista previa de la noticia" class="w-full h-64 object-cover rounded-lg mb-4">
+            <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+            <p id="modal-snippet" class="text-gray-300 mb-6"></p>
+
+            <div class="bg-gray-700 p-4 rounded-lg text-center">
+                <p class="font-semibold">Estás por salir de GameVerse. ¿Quieres continuar?</p>
+            </div>
+        </div>
+
+        <div class="bg-gray-900 px-6 py-4 rounded-b-lg flex justify-end gap-4">
+            <button id="cancel-btn" class="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-lg transition">Cancelar</button>
+            <a id="continue-link" href="#" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition">Continuar</a>
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('preview-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const cancelBtn = document.getElementById('cancel-btn');
+            const continueLink = document.getElementById('continue-link');
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const modalSnippet = document.getElementById('modal-snippet');
+
+            const newsLinks = document.querySelectorAll('.news-link');
+
+            newsLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    const url = link.dataset.url;
+                    const title = link.dataset.title;
+                    const image = link.dataset.image;
+                    const snippet = link.dataset.snippet;
+
+                    continueLink.href = url;
+                    modalImage.src = image;
+                    modalTitle.textContent = title;
+                    modalSnippet.textContent = snippet;
+
+                    modal.classList.remove('hidden');
+                });
+            });
+
+            function closeModal() {
+                modal.classList.add('hidden');
+            }
+
+            closeModalBtn.addEventListener('click', closeModal);
+            cancelBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', closeModal);
+        });
+    </script>
+
+  </body>
+</html>

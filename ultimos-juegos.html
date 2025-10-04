@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Gaming</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111827; 
+            color: #f3f4f6; 
+        }
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6; 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb; 
+        }
+
+    
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .animate-card {
+            opacity: 0; 
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-blue-500/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-white uppercase">
+                <a href="#">Game<span class="text-blue-500">Verse</span></a>
+            </h1>
+            <nav class="hidden md:flex space-x-4">
+                <a href="inicio.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Inicio</a>
+                <a href="portal.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Portal</a>
+                <a href="proximamente.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Próximamente</a>
+                <a href="noticias.html" class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">Noticias</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        
+        <section id="ultimos-juegos" class="mb-20">
+            <h2 class="text-4xl font-bold text-center mb-10 border-b-4 border-blue-500 pb-2 inline-block">Últimos <span class="text-blue-500">Hits</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                
+                <a href="elden-ring.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.1s;">
+                        <img src="https://i0.wp.com/www.gamerfocus.co/wp-content/uploads/2023/12/Elden-Ring-tendra-su-expansion-mas-tarde-de-lo-esperado-segun-sus-productores11.jpg?resize=860%2C484&ssl=1" alt="Elden Ring" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Elden Ring: Shadow of the Erdtree</h3>
+                            <p class="text-gray-400 text-sm">La esperada expansión lleva a los Sinluz a la Tierra Sombría, un lugar oculto por el Árbol Áureo donde la diosa Márika puso el pie por primera vez.</p>
+                        </div>
+                    </article>
+                </a>
+
+                
+                <a href="helldivers-2.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.2s;">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202309/2118/4d71c4644b5a4e5735593a843f1a688ce0a53972b32589ab.JPG" alt="Helldivers 2" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Helldivers 2</h3>
+                            <p class="text-gray-400 text-sm">Únete a la lucha por la libertad en una galaxia hostil en este frenético shooter cooperativo en tercera persona. La Supertierra te necesita.</p>
+                        </div>
+                    </article>
+                </a>
+
+                
+                <a href="hades-2.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.3s;">
+                        <img src="https://gaming-cdn.com/images/products/13290/orig/hades-ii-pc-steam-cover.jpg?v=1758879517" alt="Hades II" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Hades II</h3>
+                            <p class="text-gray-400 text-sm">Lucha más allá del Inframundo usando hechicería oscura para enfrentarte al Titán del Tiempo en esta fascinante secuela del galardonado juego de mazmorras roguelike.</p>
+                        </div>
+                    </article>
+                </a>
+
+                
+                <a href="final-fantasy-vii-rebirth.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.4s;">
+                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202308/3005/537b5208a8ee42935286a44b3b981da86d976bf54899bf98.jpg" alt="Final Fantasy VII Rebirth" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Final Fantasy VII Rebirth</h3>
+                            <p class="text-gray-400 text-sm">La segunda entrega del proyecto remake de Final Fantasy VII. Cloud y sus amigos escapan de Midgar y exploran el vasto mundo en busca de Sephiroth.</p>
+                        </div>
+                    </article>
+                </a>
+                
+                <a href="silksong.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card" style="animation-delay: 0.3s;">
+                        <img src="https://assets.xboxservices.com/assets/c3/ba/c3badfea-655f-4ddb-a037-704e5cf27930.jpg?n=488123_GLP-Page-Hero-1084_1920x1080.jpg" alt="Silksong" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Hollow Knight: Silksong</h3>
+                            <p class="text-gray-400 text-sm">Hollow Knight Silksong es la épica secuela del premiado videojuego de acción y aventura Hollow Knight, los fans lo esperaron más de 7 años.</p>
+                        </div>
+                    </article>
+                </a>
+
+                
+                <a href="starfield.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.6s;">
+                        <img src="https://www.irrompibles.net/irrwp/wp-content/uploads/2023/09/Starfield-portada-copy.jpg" alt="Starfield" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Starfield</h3>
+                            <p class="text-gray-400 text-sm">El primer universo nuevo en 25 años de Bethesda Game Studios. Crea tu personaje y explora con una libertad sin precedentes mientras te embarcas en un viaje épico.</p>
+                        </div>
+                    </article>
+                </a>
+
+                
+                <a href="zelda-tears-of-the-kingdom.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.7s;">
+                        <img src="https://zeldacentral.com/wp-content/uploads/2025/03/Tears-of-the-Kingdom-wallpaper.jpg" alt="Zelda: Tears of the Kingdom" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Zelda: Tears of the Kingdom</h3>
+                            <p class="text-gray-400 text-sm">La aventura de Link se expande a los cielos de Hyrule. Usa nuevas habilidades para construir armas y vehículos increíbles para enfrentar a las fuerzas oscuras.</p>
+                        </div>
+                    </article>
+                </a>
+
+                
+                <a href="street-fighter-6.html" class="block">
+                    <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-blue-500/50 transition-shadow duration-300 transform hover:-translate-y-2 animate-card h-full" style="animation-delay: 0.8s;">
+                        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch-2/70010000095203/12d36a4c9bbf43a4babba2f203e1e271ef08de143349e08231dff56fd2bef70e" alt="Street Fighter 6" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold mb-2">Street Fighter 6</h3>
+                            <p class="text-gray-400 text-sm">La evolución de los juegos de lucha con nuevas mecánicas como el Drive System y modos de juego innovadores como el World Tour y el Battle Hub.</p>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+
+        
+        
+    </main>
+
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-400">
+            <p>&copy; 2025 GameVerse. Todos los derechos reservados. Hecho por Francisco Ramón</p>
+        </div>
+    </footer>
+
+</body>
+</html>
